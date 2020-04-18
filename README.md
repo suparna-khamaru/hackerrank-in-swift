@@ -1,2 +1,2 @@
 # hackerrank-in-swift
-Some of the popular ds &amp; algo programs in Swift
+Some of the popular ds &amp; algos in Swift
