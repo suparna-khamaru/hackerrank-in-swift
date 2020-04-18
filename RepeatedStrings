@@ -1,0 +1,32 @@
+///Repeated String Challenge
+func repeatedString(s: String, n: Int) -> Int {
+    var count = 0
+
+    for character in s {
+        count += character == "a" ? 1 : 0
+    }
+
+    func getTheRestOfAs(_ rest: Int) -> Int {
+        var count = 0
+        var iteration = 0
+        
+        for character in s {
+            if iteration < rest {
+                count += character == "a" ? 1 : 0
+                iteration += 1
+            }
+            else {
+                break
+            }
+        }
+        return count
+    }
+
+    if count == s.count {
+        return n
+    } else {
+        count = (n/s.count) * count + getTheRestOfAs(n % s.count)
+    }
+    return count
+}
+print(repeatedString(s: "abcac", n: 10))
