@@ -1,4 +1,4 @@
-# hackerrank-in-swift
+# hackerrank challenge solutions in swift
 Some of the popular ds &amp; algos in Swift
 
 
