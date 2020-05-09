@@ -1,0 +1,16 @@
+import Foundation
+
+// factorial function
+
+
+func factorial(n: Int) -> Int {
+    
+    if (n > 1) {
+        let m = n * factorial(n: n-1)
+        return m
+    }
+    return 1
+}
+
+print(factorial(n: 4))   //24
+print(factorial(n: 5))   //120
