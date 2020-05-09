@@ -44,4 +44,4 @@ func reverseArrayUsingRecursion(start: Int,
 }
 
 print(reverseArrayUsingRecursion(start: 0,
-                                 end: arrayList.count-1))
+                                 end: arrayList.count-1))    //[9, 8, 7, 6, 5, 4, 3, 2, 1]
