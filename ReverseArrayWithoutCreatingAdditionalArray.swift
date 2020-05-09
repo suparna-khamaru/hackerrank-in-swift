@@ -15,13 +15,10 @@ func reverseArray() -> [Int] {
         listOfNumbers[firstItem] = listOfNumbers[lastItem]
         listOfNumbers[lastItem] = temp
         
-        firstItem = firstItem + 1
-        lastItem = lastItem - 1
+        firstItem += 1
+        lastItem -= 1
     }
     return listOfNumbers
 }
 
 print(reverseArray())   //[100, 10, 3, 2, 1]
-
-
-
