@@ -1,0 +1,17 @@
+func rotateLeft(a: [Int], d: Int) -> [Int] {
+
+    var rotatedArray = a
+    let n = rotatedArray.count
+    
+    for oldIndex in a.indices {
+        let newIndex = (oldIndex + n - d) % n
+        rotatedArray[newIndex] = a[oldIndex]
+    }
+    return rotatedArray
+}
+
+print(rotateLeft(a: [1,2,3,4,5], d: 4))
+                  // [5, 1, 2, 3, 4]
+
+print(rotateLeft(a: [33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97], d: 13))
+                    //[87, 97, 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60]
