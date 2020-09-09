@@ -80,7 +80,7 @@ i = 4
         p = 1,1,1,1
 
 where, 
-- o denotes printed output
+- p denotes printed output
 - 0 in p denotes spaces
 - 1 in p denotes hashes
 */
