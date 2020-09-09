@@ -57,3 +57,30 @@ print(staircase2(n: 6))
       ######
 */
 
+
+
+
+/*
+Flow for understanding:
+
+i = 0 
+        j = 0,1,2,3
+        p = 0,0,0,1
+
+i = 2 
+        j = 0,1,2,3
+        p = 0,0,1,1
+
+i = 3 
+        j = 0,1,2,3
+        p = 0,1,1,1
+
+i = 4 
+        j = 0,1,2,3
+        p = 1,1,1,1
+
+where, 
+- o denotes printed output
+- 0 in p denotes spaces
+- 1 in p denotes hashes
+*/
