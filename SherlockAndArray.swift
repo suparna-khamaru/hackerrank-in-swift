@@ -9,6 +9,17 @@ import Foundation
 
 func balancedSums(arr: [Int]) -> String {
     
+
+// Approach 2
+    
+    
+// sum of all elements in the array = -3+2-2+1-2 = -4 -> sum = -4 
+
+// i=0 -> leftSum = -3 (-3)         && sum = -1 (-4+3 = -1)
+// i=1 -> leftSum = -1 (-3+2)       && sum = -3 (-1-2 = -3) -> matched 
+// i=2 -> leftSum = -3 (-3+2-2)     && sum = -1 (-3+2 = -1) -> matched 
+// i=3 -> leftSum = -2 (-3+2-2+1)   && sum = -2 (-1+1 = 0)
+// i=4 -> leftSum = -4 (-3+2-2+1-2) && sum = 0  (0+2 = 2)
     
     var indices = [Int]()
     
@@ -27,9 +38,41 @@ func balancedSums(arr: [Int]) -> String {
 }
 
 
+// Approach 1  - Brute force
+
+// 0 = 2-2+1-2?     if yes, append index=0
+// -3 = -1+1-2?     if yes, append index=1
+// -3+2 = 1-2?      if yes, append index=2
+// -3+2-2 = -2?     if yes, appened index=3
 
 
-
+//     func equilibriumIndex1(nums: [Int]) -> [Int]? {
+        
+//         guard nums.count > 1 else { return nil }
+        
+//         var left = 0
+//         var right = 0
+//         var output = [Int]()
+        
+//         for i in nums.indices {
+            
+//             left = 0
+//             right = 0
+            
+//             for j in 0..<i {
+//                 left = left + nums[j]
+//             }
+            
+//             for j in i+1..<nums.count {
+//                 right = right + nums[j]
+//             }
+            
+//             if left == right { output.append(i) }
+//         }
+    
+//         return output.isEmpty ? nil : output
+//     }
+    
 
 
 
