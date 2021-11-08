@@ -15,14 +15,31 @@ func balancedSums(arr: [Int]) -> String {
 
 // Approach 2
     
-    
+// Example 1  -->  [-3, 2, -2, 1, -2]
 // sum of all elements in the array = -3+2-2+1-2 = -4 -> sum = -4 
-
 // i=0 -> leftSum = -3 (-3)         && sum = -1 (-4+3 = -1)
 // i=1 -> leftSum = -1 (-3+2)       && sum = -3 (-1-2 = -3) -> matched 
 // i=2 -> leftSum = -3 (-3+2-2)     && sum = -1 (-3+2 = -1) -> matched 
 // i=3 -> leftSum = -2 (-3+2-2+1)   && sum = -2 (-1+1 = 0)
 // i=4 -> leftSum = -4 (-3+2-2+1-2) && sum = 0  (0+2 = 2)
+    
+// Example 2  -->  [1, 2, 3, 3] = 9
+
+//leftSum = 0
+// i=0 ->   rightsum = 8 (9-1 = 8)
+       
+//leftSum = 1 
+//i=1 ->    rightsum = 6 (8-2 = 6) 
+       
+//leftSum = 3 (1+2)  
+//i=2 ->    rightsum = -1 (6-3 = 3) -> matched 
+          
+// leftSum = 6 (1+2+3)
+// i=3 ->   rightsum = 0 (3-3 = 0)
+          
+// leftSum = 9 (1+2+3+3) 
+    
+    
     
     var indices = [Int]()
     
