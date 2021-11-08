@@ -28,16 +28,17 @@ func balancedSums(arr: [Int]) -> String {
 //leftSum = 0
 // i=0 ->   rightsum = 8 (9-1 = 8)
        
-//leftSum = 1 
-//i=1 ->    rightsum = 6 (8-2 = 6) 
-       
-//leftSum = 3 (1+2)  
-//i=2 ->    rightsum = -1 (6-3 = 3) -> matched 
-          
-// leftSum = 6 (1+2+3)
-// i=3 ->   rightsum = 0 (3-3 = 0)
-          
-// leftSum = 9 (1+2+3+3) 
+//i=0 ->  	left sum = 0, 		
+//		right sum = 8		 (9-1)
+
+//i=1 -> 	 left sum = 1, 		(1)
+//		right sum = 6 		(9-1-2)
+
+//i=2 ->   	left sum = 3, 		(1+2)
+//		right sum = 3		 (9-1-2-3).      -> matched 
+
+//i=3 ->   	left sum = 6,		(1+2+3)
+//	 	right sum = 0		 (9-1-2-3-3)
     
     
     
