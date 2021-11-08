@@ -41,19 +41,20 @@ func balancedSums(arr: [Int]) -> String {
 //	 	right sum = 0		 (9-1-2-3-3)
     
     
-    
-    var indices = [Int]()
-    
+
     var leftSum = 0
-    var sum = arr.reduce(0, +)
-    
-    for i in arr.indices {
-        sum = sum - arr[i]
-        
-        if leftSum == sum {
-            indices.append(i)
+    var rightSum = nums.reduce(0, +)
+    var result = [Int]()
+
+    for value in nums.indices {
+
+        rightSum -= nums[value]
+
+        if leftSum == rightSum {
+            result.append(value)
         }
-        leftSum = leftSum + arr[i]
+
+        leftSum += nums[value]
     }
     return indices.isEmpty ? "NO" : "YES"
 }
